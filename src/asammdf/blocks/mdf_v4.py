@@ -364,6 +364,7 @@ class MDF4(MDF_Common):
                     flags = identification["unfinalized_standard_flags"]
 
                 if version >= "4.10" and flags:
+                    self._from_filelike = True
                     tmpdir = Path(gettempdir())
                     if self.temporary_folder:
                         tmpdir = Path(self.temporary_folder)
