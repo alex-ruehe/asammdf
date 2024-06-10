@@ -320,7 +320,7 @@ class MDF:
             if not version:
                 _, version = get_measurement_timestamp_and_version(file_stream)
 
-            if do_close:
+            if do_close and True:
                 file_stream.close()
 
             kwargs["original_name"] = original_name
